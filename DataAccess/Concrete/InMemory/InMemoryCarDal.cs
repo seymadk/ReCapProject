@@ -85,12 +85,6 @@ namespace DataAccess.Concrete.InMemory
         {
             return _cars;
         }
-
-        public List<Car> GetBlyd(int brandId)
-        {
-            return _cars.Where(c => c.BrandId == brandId).ToList();
-        }
-
         public void Update(Car car)
         {
             Car carToUpdate = _cars.SingleOrDefault(c => c.CarId == car.CarId);
