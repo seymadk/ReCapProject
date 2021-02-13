@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Abstract
+namespace Business.Concrete
 {
-    public interface IEntity
+    public class ColorManager
     {
+
     }
 }

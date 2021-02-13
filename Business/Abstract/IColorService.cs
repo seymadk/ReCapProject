@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Business.Abstract
 {
-    public interface IColorDal : IEntityRepository<Color>
+    public interface IColorService
     {
         List<Color> GetAll();
-        Color Get(Func<object, bool> p);
+        Color GetById(int colorId);
     }
 }
