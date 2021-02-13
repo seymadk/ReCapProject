@@ -21,7 +21,7 @@ namespace Business.Concrete
         {
             _carDal.Insert(car);
 
-            if (car.CarName.Length < 2)
+            if (car.CarName.Length < 3)
             {
                 return new ErrorResult(Messages.CarNameInvalid);
             }
@@ -30,7 +30,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Car>> GetAll()
         {
-            if (DateTime.Now.Hour == 22)
+            if (DateTime.Now.Hour == 3)
             {
                 return new ErrorDataResult<List<Car>>
                     (Messages.MaintennanceTime);
@@ -65,7 +65,7 @@ namespace Business.Concrete
 
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
-            if (DateTime.Now.Hour == 23)
+            if (DateTime.Now.Hour == 4)
             {
                 return new ErrorDataResult<List<CarDetailDto>>
                     (Messages.MaintennanceTime);
