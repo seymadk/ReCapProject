@@ -7,9 +7,9 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        internal static string CarNameInvalid;
-        internal static string CarInserted;
-        internal static List<Car> MaintennanceTime;
-        internal static string CarListed;
+        internal static string CarNameInvalid = "Araba ismi geçersiz";
+        internal static string CarInserted = "Araba eklendi";
+        internal static string MaintennanceTime = "Araba bakımda";
+        internal static string CarListed = "Arabalar listelendi";
     }
 }
