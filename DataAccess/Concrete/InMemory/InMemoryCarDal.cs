@@ -1,8 +1,10 @@
 ﻿using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace DataAccess.Concrete.InMemory
@@ -20,7 +22,7 @@ namespace DataAccess.Concrete.InMemory
                     BrandId = 1,
                     ColorId = 1,
                     ModelYear = "2000",
-                    DailyPrice = "95 Türk Lirası",
+                    DailyPrice = 95,
                     Description = "3 Gün"
                 },
                 new Car
@@ -29,7 +31,7 @@ namespace DataAccess.Concrete.InMemory
                     BrandId = 2,
                     ColorId = 2,
                     ModelYear = "2001",
-                    DailyPrice = "100 Türk Lirası",
+                    DailyPrice = 100,
                     Description = "4 Gün"
                 },
                 new Car
@@ -38,7 +40,7 @@ namespace DataAccess.Concrete.InMemory
                     BrandId = 3,
                     ColorId = 3,
                     ModelYear = "2002",
-                    DailyPrice = "105 Türk Lirası",
+                    DailyPrice = 105,
                     Description = "5 Gün"
                 },
                 new Car
@@ -47,7 +49,7 @@ namespace DataAccess.Concrete.InMemory
                     BrandId = 4,
                     ColorId = 4,
                     ModelYear = "2003",
-                    DailyPrice = "110 Türk Lirası",
+                    DailyPrice = 110,
                     Description = "6 Gün"
                 },
                 new Car
@@ -56,7 +58,7 @@ namespace DataAccess.Concrete.InMemory
                     BrandId = 5,
                     ColorId = 5,
                     ModelYear = "2004",
-                    DailyPrice = "115 Türk Lirası",
+                    DailyPrice = 115,
                     Description = "7 gün"
                 }
             };
@@ -81,10 +83,41 @@ namespace DataAccess.Concrete.InMemory
             _cars.Remove(carToDelete);
         }
 
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetAll()
         {
             return _cars;
         }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetCarsByBrandId(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Car> GetCarsByColorId(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(Car entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(Car car)
         {
             Car carToUpdate = _cars.SingleOrDefault(c => c.CarId == car.CarId);

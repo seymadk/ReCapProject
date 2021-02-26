@@ -19,6 +19,11 @@ namespace DataAccess.Concrete.EntityFramework
             throw new NotImplementedException();
         }
 
+        public Color Get(Expression<Func<Color, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Color> GetAll(Expression<Func<Color, bool>> filter = null)
         {
             throw new NotImplementedException();
@@ -30,6 +35,11 @@ namespace DataAccess.Concrete.EntityFramework
         }
 
         public List<Color> GetCarsByColorId(Expression<Func<Color, bool>> filter = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Insert(Color entity)
         {
             throw new NotImplementedException();
         }

@@ -1,4 +1,5 @@
-﻿using DataAccess.Abstract;
+﻿using Core.DataAccess.EntityFramework;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,44 +8,39 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfBrandDal : IBrandDal
+    public class EfCarImagesDal : ICarImagesDal
     {
-        public void Add(Brand entity)
+        public void Delete(CarImages entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Brand entity)
+        public CarImages Get(Expression<Func<CarImages, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        public Brand Get(Expression<Func<Brand, bool>> filter)
+        public List<CarImages> GetAll(Expression<Func<CarImages, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public List<Brand> GetAll(Expression<Func<Brand, bool>> filter = null)
+        public List<CarImages> GetCarsByBrandId(Expression<Func<CarImages, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public List<Brand> GetCarsByBrandId(Expression<Func<Brand, bool>> filter = null)
+        public List<CarImages> GetCarsByColorId(Expression<Func<CarImages, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public List<Brand> GetCarsByColorId(Expression<Func<Brand, bool>> filter = null)
+        public void Insert(CarImages entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(Brand entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Brand entity)
+        public void Update(CarImages entity)
         {
             throw new NotImplementedException();
         }
